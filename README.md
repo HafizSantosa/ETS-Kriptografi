@@ -243,6 +243,16 @@ Setelah AddRoundKey: 9963 (C278 ⊕ 5B1B)
 
 Ciphertext Final: 9963 (1001100101100011)
 ```
+## Dokumentasi GUI
+
+### Proses Enkripsi
+![alt text](img/encrypt.png)
+
+### Proses Dekripsi
+![alt text](img/decrypt.png)
+
+### Test Case
+![alt text](img/cases.png)
 
 ## Kesimpulan
 
