@@ -5,7 +5,7 @@
 - Irfan Qobus Salim - 5027221058
 - Hafiz Akmaldi Santosa - 5027221061
 - Atha Rahma A - 5027221030
-- Angela Christie - 5027221047
+- Angella Christie - 5027221047
 
 ## Daftar Isi
 - [Pendahuluan](#pendahuluan)
@@ -27,6 +27,7 @@
 - [Kelebihan dan Keterbatasan Mini-AES](#analisis-kelebihan-dan-keterbatasan-mini-aes)
   - [Kelebihan](#kelebihan)
   - [Keterbatasan](#keterbatasan)
+- [Analisis Keamanan dan Avalanche Effect](#analisis-keamanan-dan-avalanche-effect)
 - [Contoh Proses Enkripsi](#contoh-proses-enkripsi)
 - [Dokumentasi GUI](#dokumentasi-gui)
   - [Proses Enkripsi](#proses-enkripsi)
@@ -165,6 +166,22 @@ GUI menyediakan:
 2. **Difusi Terbatas**: Dengan matriks state hanya 2x2, difusi jauh lebih terbatas dibandingkan dengan AES penuh.
 3. **S-Box yang Disederhanakan**: S-Box 4-bit memberikan confusion yang lebih sedikit dibandingkan dengan S-Box 8-bit dalam AES.
 4. **Lebih Sedikit Ronde**: Hanya 3 ronde dibandingkan dengan 10, 12, atau 14 dalam AES, mengurangi margin keamanan.
+
+## Analisis Keamanan dan Avalanche Effect
+Analisis dilakukan dengan mengubah 1 bit pada plaintext atau kunci, lalu mengamati perubahan pada ciphertext yang dihasilkan. Tujuan dari uji ini adalah untuk melihat apakah perubahan kecil (sekecil 1 bit) bisa menyebabkan perubahan besar pada hasil enkripsi, seperti yang diharapkan pada cipher yang kuat. Sifat pada algoritma kriptografi di mana perubahan kecil (misalnya, mengubah 1 bit saja) pada input (plaintext atau kunci) akan menyebabkan perubahan besar pada output (ciphertext) disebut dengan **Avalanche Effect**. Berikut adalah uji sensitivitas dari Mini-AES:
+
+**Key awal = 5678**
+| Plaintext | Ciphertext | XOR Result        | Bit Berubah | Avalanche (%) |
+|:----------|:-----------|:------------------|:------------|:--------------|
+| 1234      | 9963        | -                  | -           | -             |
+| 1235      | 55E5        | 1100110010000110    | 7           | 43.75%        |
+| 1236      | 241B        | 1011110101111000    | 10          | 62.5%         |
+| 1237      | 4E06        | 1101011101100101    | 11          | 68.75%        |
+| 1238      | 17AE        | 1000111011001101    | 9           | 56.25%        |
+
+Kesimpulan:
+- Perubahan 1 angka kecil di plaintext menyebabkan perubahan sekitar 40%-70% bit di ciphertext.
+- Ini menunjukkan efek Avalanche sudah lumayan kuat meski pakai Mini AES.
 
 ## Contoh Proses Enkripsi
 
