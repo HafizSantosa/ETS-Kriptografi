@@ -7,6 +7,33 @@
 - Atha Rahma A - 5027221030
 - Angela Christie - 5027221047
 
+## Daftar Isi
+- [Pendahuluan](#pendahuluan)
+- [Spesifikasi Algoritma Mini-AES](#spesifikasi-algoritma-mini-aes)
+  - [Komponen Utama](#komponen-utama)
+    - [SubNibbles](#1-subnibbles)
+    - [ShiftRows](#2-shiftrows)
+    - [MixColumns](#3-mixcolumns)
+    - [AddRoundKey](#4-addroundkey)
+    - [Key Expansion](#5-key-expansion)
+- [Flowchart](#flowchart)
+  - [Enkripsi Mini-AES](#enkripsi-mini-aes)
+  - [Expansion Key](#expansion-key)
+- [Detail Implementasi](#detail-implementasi)
+  - [Struktur Program](#struktur-program)
+  - [Test Case](#test-case)
+  - [Mode Operasi Blok](#mode-operasi-blok)
+  - [GUI](#gui)
+- [Kelebihan dan Keterbatasan Mini-AES](#analisis-kelebihan-dan-keterbatasan-mini-aes)
+  - [Kelebihan](#kelebihan)
+  - [Keterbatasan](#keterbatasan)
+- [Contoh Proses Enkripsi](#contoh-proses-enkripsi)
+- [Dokumentasi GUI](#dokumentasi-gui)
+  - [Proses Enkripsi](#proses-enkripsi)
+  - [Proses Dekripsi](#proses-dekripsi)
+  - [Test Case](#test-case-1)
+- [Kesimpulan](#kesimpulan)
+
 ## Pendahuluan
 
 Dokumen ini menjelaskan implementasi Mini-AES, versi sederhana dari Advanced Encryption Standard (AES) yang dirancang untuk tujuan pembelajaran. Mini-AES mempertahankan struktur inti AES tetapi beroperasi pada ukuran blok dan kunci yang lebih kecil untuk memudahkan pemahaman algoritma.
