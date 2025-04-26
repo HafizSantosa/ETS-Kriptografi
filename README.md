@@ -96,41 +96,12 @@ Algoritma expansion key menghasilkan round key dari kunci awal. Untuk Mini-AES d
 
 ### Enkripsi Mini-AES
 
-![image](https://github.com/user-attachments/assets/0fa28b9d-48c0-4100-897c-e6d1964b1bbd)
+![fw1](https://github.com/user-attachments/assets/1030945a-4af1-4f90-a181-4d4de4f09ae4)
 
 
 ### Expansion key
 
-```
-MULAI
-  |
-  v
-Inisialisasi round_keys[0] = kunci awal
-  |
-  v
-UNTUK i = 0 hingga 2:
-  |  |
-  |  v
-  |  Rotasi dua nibble terakhir dari kunci sebelumnya
-  |  |
-  |  v
-  |  Terapkan S-Box ke semua nibble
-  |  |
-  |  v
-  |  XOR nibble pertama dengan konstanta ronde
-  |  |
-  |  v
-  |  XOR dengan round key sebelumnya
-  |  |
-  |  v
-  |  Simpan sebagai round key baru
-  |
-  v
-Kembalikan semua round key
-  |
-  v
-SELESAI
-```
+![fw2](https://github.com/user-attachments/assets/eb0a0c4d-7ba2-4b5f-9e5e-a29be0937881)
 
 ## Detail Implementasi
 
