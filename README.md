@@ -96,50 +96,10 @@ Algoritma expansion key menghasilkan round key dari kunci awal. Untuk Mini-AES d
 
 ### Enkripsi Mini-AES
 
-```
-MULAI
-  |
-  v
-Inisialisasi state dengan plaintext
-  |
-  v
-Hasilkan round key dari kunci awal
-  |
-  v
-AddRoundKey (Ronde 0)
-  |
-  v
-UNTUK ronde = 1 hingga 2:
-  |  |
-  |  v
-  |  SubNibbles
-  |  |
-  |  v
-  |  ShiftRows
-  |  |
-  |  v
-  |  MixColumns
-  |  |
-  |  v
-  |  AddRoundKey
-  |
-  v
-SubNibbles (Ronde Final)
-  |
-  v
-ShiftRows (Ronde Final)
-  |
-  v
-AddRoundKey (Ronde Final)
-  |
-  v
-Output ciphertext
-  |
-  v
-SELESAI
-```
+![image](https://github.com/user-attachments/assets/0fa28b9d-48c0-4100-897c-e6d1964b1bbd)
 
-### expansion key
+
+### Expansion key
 
 ```
 MULAI
